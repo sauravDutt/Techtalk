@@ -2,6 +2,7 @@ const path = require('path');
 const http = require('http');
 const express = require('express');
 const socketio = require('socket.io');
+const cors = require('cors');
 const formatMessage = require('./utils/messages');
 const { userJoin, getCurrentUser, userLeave, getRoomUsers } = require('./utils/users');
 
@@ -11,12 +12,15 @@ const server = http.createServer(app);
 const io = socketio(server);
 
 //set static folder
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname, '/public/'));
+app.get("/", (req, res) => res.render("/public/index.html"));
+
+app.use(cors());
 
 const botName = 'Saurav Dutt ';
 
 // Run when client connects
-io.on('connection', socket => {
+io.on('connection', socket => {    
 
     socket.on('joinRoom', ({ username, room }) => {
 
@@ -24,7 +28,7 @@ io.on('connection', socket => {
         socket.join(user.room);
 
         // Welcome current user
-        socket.emit('message', formatMessage(botName, 'Welcome to SD | Teck Talk !!'));
+        socket.emit('message', formatMessage(botName, `Welcome ${user.username} to SD | Teck Talk !!`));
 
         //Broadcast when a user connects
         socket.broadcast.to(user.room).emit('message', formatMessage(botName, `${user.username} has joined the chat`));
@@ -61,7 +65,7 @@ io.on('connection', socket => {
 
 });
 
-const PORT = 3000 || process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
