@@ -27,7 +27,7 @@ io.on('connection', socket => {
     socket.join(user.room);
 
     // Welcome current user
-    socket.emit('message', formatMessage(botName, `Welcome ${user.username} to Ansul University`));
+    socket.emit('message', formatMessage(botName, `Welcome ${user.username} to SD techtalk`));
 
     // Broadcast when a user connects
     socket.broadcast
