@@ -1,7 +1,7 @@
 
 :root {
 	--dark-color-a: #fff;
-	--dark-color-b: rgb(255, 240, 254);
+	--dark-color-b: #464646;
 	--light-color: #fff;
 	--success-color: #5cb85c;
 	--error-color: #d9534f;
@@ -16,8 +16,7 @@
 body {
 	height: 100%;
 	font-size: 16px;
-	background: url('../images/sitebg.png') no-repeat center fixed;
-	background-size: cover;
+	background-color: #313131;
 	margin: 20px;
 	font-family: 'Indie Flower', cursive;
 	
@@ -34,31 +33,37 @@ a {
 .btn {
 	cursor: pointer;
 	padding: 5px 15px;
-	background: #562974;
-	color: var(--dark-color-a);
+	color: rgb(0, 0, 0);
+	border: 2px solid rgb(0, 0, 0);
+	background: #5AC673;
 	border: 0;
 	border-radius: 15px;
 	font-size: 1.3rem;
+}
+
+.btn:hover {
+	background-color: aqua;
+	color: #464646;
 }
 
 /* Chat Page */
 
 .chat-container {
 	max-width: 1100px;
-	background: #fff;
+	background: #464646;
 	margin:  auto;
-	margin-top: 22vh;
+	margin-top: 19vh;
 	overflow: hidden;
-	border: 2px solid #562974;
+	border: 2px solid aqua;
 	border-radius: 10px;
 	font-size: 1.3rem;
 	
 }
 
 .chat-header {
-	background: var(--dark-color-a);
+	background: var(--dark-color-b);
 	color: #562974;
-	border-bottom: 2px solid #562974;
+	border-bottom: 2px solid aqua;
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 	font-family: 'Poiret One', cursive;
@@ -75,7 +80,7 @@ a {
 
 .chat-sidebar {
 	background: var(--dark-color-b);
-	color: #562974;
+	color: #5AC673;
 	padding: 20px 20px 60px;
 	overflow-y: scroll;
 }
@@ -106,24 +111,26 @@ a {
 	margin-bottom: 15px;
 	background-color: var(--dark-color-b);
 	border-radius: 5px;
+	color: #5AC673;
+	border: 2px solid aqua;
 }
 
 .chat-messages .message .meta {
 	font-size: 1.3rem;
 	font-weight: bold;
-	color: #562974;
+	color: #5AC673;
 	opacity: 0.7;
 	margin-bottom: 7px;
 }
 
 .chat-messages .message .meta span {
-	color: #777;
+	color: aqua;
 }
 
 .chat-form-container {
 	padding: 20px 30px ;
-	border-top: 2px solid #562974;
-	background-color: var(--dark-color-a);
+	border-top: 2px solid aqua;
+	background-color: var(--dark-color-b);
 }
 
 .chat-form-container form {
@@ -136,28 +143,38 @@ a {
 	margin-right: 10px;
 	height: 40px;
 	flex: 1;
+	color: #5AC673;
+	background-color: #464646;
 	border-radius: 20px;
-	border: 1px solid #562974;
+	border: 1px solid aqua;
 }
 
 /* Join Page */
 .join-container {
 	max-width: 500px;
 	margin:  auto;
-	margin-top: 24vh;
-	color: #562974;
-	border: 2px solid #562974;
+	margin-top: 2vh;
+	color: #5AC673;
+	border: 2px solid ;
+	border: 2px solid aqua;
 	border-radius: 5px;
 	font-size: 1.3rem;
+}
+.join-container img {
+	margin-top: -40px;
+	margin-left: -21px;
+}
+.join-container a{
+	color: aqua;
 }
 
 .join-header {
 	text-align: center;
 	padding: 20px;
-	background: var(--dark-color-a);
+	background: #464646;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
-	border-bottom: 2px solid #562974;
+	border-bottom: 2px solid aqua;
 	font-family: 'Poiret One', cursive;
 }
 
@@ -167,7 +184,7 @@ a {
 }
 .test {
 	padding: 30px 40px;
-	background: var(--dark-color-a);
+	background: #464646;
 }
 
 .join-main p {
@@ -188,9 +205,10 @@ a {
 	padding: 15px;
 	height: 40px;
 	width: 100%;
-	color: #562974;
+	color: #5AC673;
+	background-color: #464646;
 	border-radius: 20px;
-	border: 1px solid #562974;
+	border: 1px solid aqua;
 }
 
 .join-main select {
@@ -198,10 +216,10 @@ a {
 	padding: 5px;
 	height: 40px;
 	width: 100%;
-	background-color: #fff;
-	color: #562974;
+	background-color: #464646;
+	color: #5AC673;
 	border-radius: 20px;
-	border: 1px solid #562974;
+	border: 1px solid aqua;
 }
 
 .join-main .btn {
@@ -211,6 +229,9 @@ a {
 .footer{
 	text-align: center;
 	margin-top: 5px;
+}
+.footer a {
+	color: aqua;
 }
 
 
@@ -226,7 +247,7 @@ a {
 }	
 @media (max-width: 500px) {
 	.join-container {
-		margin-top: 22vh;
+		display: none;
 	}
 	.footer{
 		margin: 10px 0px 0px 0px;

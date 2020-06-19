@@ -12,19 +12,54 @@
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
 			integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
 			crossorigin="anonymous"
-		/>
-		<link rel="stylesheet" href="css/style.css" />
+        />
+        
+        <link rel="stylesheet" href="css/style.css" />
+        <style>
+            .footer a {
+            	color: aqua;
+            }
+            .join-container {
+                border: 4px solid aqua;
+            }
+        </style>
 		<title>SD | TechTalk</title>
-		<link rel="shortcut icon" href="images/chat.ico">
+        <link rel="shortcut icon" href="images/chat.ico">
+        <link rel="stylesheet" href="css/modal.css">
 	</head>
 	<body>
 		<div class="join-container">
 			<main class="test">
-				
-				<p   style="text-align: center;"><a href="try.html" style="text-decoration: none;color: #562974;">Try-Out</a>  |  <a href="#" style="text-decoration: none; color: #562974;">Info</a></p>
-				<p  class="footer">&copy; 2020 <a href="https://www.sauravdutt.tech/">sauravdutt.tech</a>.</p>
+				<header class="join-header" style="border-bottom: 2px solid #5AC673;">
+                    <img src="images/logo.gif" alt="Logo">
+                    <h1 style="color: #5AC673;"><i class="far fa-comment-alt"></i> SD | TECH<span style="color: aqua;">Talk</span></h1>
+                </header>
+				<p   style="text-align: center; color: aqua;"><a href="try.html" style="text-decoration: none;color: aqua;">Try-Out</a>  |  <a href="#" id="modalBtn" style="text-decoration: none; color: aqua;">Info</a></p>
+				<p  class="footer" style="color: #5AC673;" >&copy; 2020 <a href="https://www.sauravdutt.tech/">sauravdutt.tech</a>.</p>
 			</main>
-		</div>
-		
+        </div>
+        <div id="simpleModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="closeBtn" id="closeBtn">
+                        &times;
+                    </span>
+                    <h2>SD | TECHTalk</h2>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Hello I am a Modal!!
+                    </p>
+                    <p>
+                        SD | Techtalk, is an open source chat room chat application. Built with pure JavaScript(vanilla js), Node js, Express and Socket.io. The source code for the same is available in the following :- <a href="https://github.com/sauravDutt/Techtalk"><h4>https://github.com/sauravDutt/Techtalk .</h4></a>Feel free to download and use the code in your projects for any suggestion you can wright me at <a href="mailto:info@sauravdutt.tech" style="text-decoration: none;color: #562974;">info@sauravdutt.tech</a>. The functioning of this application is pretty simple, there are two ways of using it either by signing up and then loging in or by trying out without any registration. Thank you for reading this bullshit, I hope you have a Good Day. 
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <h3>&copy; 2020 <a href="https://www.sauravdutt.tech/" >sauravdutt.tech</a></h3>
+                </div>
+            </div>8iu
+        </div>
+        
+        <script src="js/modal.js"></script>
 	</body>
 </html>
