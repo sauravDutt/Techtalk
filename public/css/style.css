@@ -144,7 +144,7 @@ a {
 .join-container {
 	max-width: 500px;
 	margin:  auto;
-	margin-top: 26vh;
+	margin-top: 24vh;
 	color: #562974;
 	border: 2px solid #562974;
 	border-radius: 5px;
@@ -164,6 +164,10 @@ a {
 .join-main {
 	padding: 30px 40px;
 	background: var(--dark-color-b);
+}
+.test {
+	padding: 30px 40px;
+	background: var(--dark-color-a);
 }
 
 .join-main p {
@@ -205,7 +209,8 @@ a {
 	width: 100%;
 }
 .footer{
-	margin: 10px 20px 3px 120px;
+	text-align: center;
+	margin-top: 5px;
 }
 
 
