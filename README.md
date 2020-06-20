@@ -7,5 +7,5 @@ After Clicking try-out the following section opens,<br>
 ![](public/images/tryout.png) <br>
 Fill in any username of your choice and then choos a room of your interest, and press join chat.
 This will take you to the following section or the chat room :- <br>
-
+![](public/images/chatroom.png) <br>
 Thank you for reading this bullshit, I hope you have a Good Day.
